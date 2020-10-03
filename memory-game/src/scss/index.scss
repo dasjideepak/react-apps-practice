@@ -1,0 +1,63 @@
+@import "reset";
+
+// Card
+
+.container {
+  max-width: 680px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.grid {
+  background-color: rgb(77, 77, 77);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.card {
+  height: 120px;
+  background-color: rgb(26, 25, 25);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.heading {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 3em;
+  font-weight: 800;
+  padding: 24px 0;
+}
+
+.score-panel {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 24px;
+  font-weight: 800;
+  padding: 12px 0;
+}
+
+.img {
+  font-size: 6em;
+}
+
+.card-flipped,
+.card-matched,
+.card-not-matched {
+  height: 120px;
+  border-radius: 12px;
+}
+
+.card-flipped {
+  background-color: rgb(0, 24, 77);
+}
+
+.card-matched {
+  background-color: rgb(29, 126, 29);
+  cursor: none;
+}
+
+.card-not-matched {
+  background-color: rgb(230, 14, 14);
+}
