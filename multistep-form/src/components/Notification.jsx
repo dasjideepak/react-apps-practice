@@ -1,17 +1,30 @@
 import React, { Component } from "react";
-import StepBar from "./StepBar";
+import Buttons from "./Buttons";
 
 export default class Notification extends Component {
   render() {
+    const { values, inputChange, prevStep, nextStep } = this.props;
     return (
-      <div>
-        <StepBar />
-        <h1>Notification</h1>
-        <div className="buttons-container ">
-          <button onClick={this.props.prev}>Previous</button>
-          <button onClick={this.props.next}>Confirm</button>
-        </div>
-      </div>
+      <form className="flex-column">
+        <label htmlFor="notifPref">Notification Preferences</label>
+        <input
+          type="checkbox"
+          name="notifPref"
+          onChange={inputChange}
+          value={values.notifiPref}
+          required
+        />
+        <label htmlFor="newsletter">Newsletter</label>
+        <input
+          type="radio"
+          name="newsletter"
+          onChange={inputChange}
+          value={values.newsletter}
+          required
+        />
+
+        <Buttons prevStep={prevStep} nextStep={nextStep} step={values.step} />
+      </form>
     );
   }
 }
