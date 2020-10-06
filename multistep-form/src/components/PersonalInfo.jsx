@@ -8,8 +8,8 @@ export default class PersonalInfo extends Component {
       inputChange,
       prevStep,
       nextStep,
-      step,
       errors,
+      step,
     } = this.props;
     return (
       <form className="flex-column">
