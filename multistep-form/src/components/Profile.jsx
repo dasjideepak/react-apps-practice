@@ -3,7 +3,14 @@ import Buttons from "./Buttons";
 
 export default class Profile extends Component {
   render() {
-    const { values, inputChange, prevStep, nextStep, errors } = this.props;
+    const {
+      values,
+      inputChange,
+      prevStep,
+      nextStep,
+      errors,
+      step,
+    } = this.props;
     return (
       <form className="flex-column">
         <input
@@ -56,7 +63,7 @@ export default class Profile extends Component {
           required
         />
         <span className="err-msg">{errors.phoneValidationMsg}</span>
-        <Buttons prevStep={prevStep} nextStep={nextStep} step={values.step} />
+        <Buttons prevStep={prevStep} nextStep={nextStep} step={step} />
       </form>
     );
   }

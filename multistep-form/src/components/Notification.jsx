@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 
 export default class Notification extends Component {
   render() {
-    const { values, inputChange, prevStep, nextStep } = this.props;
+    const { values, inputChange, prevStep, nextStep, step } = this.props;
     return (
       <form className="flex-column">
         <label htmlFor="notifPref">Notification Preferences</label>
@@ -23,7 +23,7 @@ export default class Notification extends Component {
           required
         />
 
-        <Buttons prevStep={prevStep} nextStep={nextStep} step={values.step} />
+        <Buttons prevStep={prevStep} nextStep={nextStep} step={step} />
       </form>
     );
   }
